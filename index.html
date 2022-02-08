@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Другие кодировки плохо поддерживаются или имеют дыры -->
+    <meta charset="UTF-8">
+    <!-- Режим работы Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Для мобилок -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- META-ТЕГИ ДЛЯ ПОИСКОВИКОВ -->
+    <meta name="description" content="Travel Agency" />
+    <meta name="keywords" content="Travel Agency" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, notranslate, noimageindex" />
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#00c7ff">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-config" content="./img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/calendar.css">
+
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/separator.css">
+    <link rel="stylesheet" href="css/destination.css">
+    <link rel="stylesheet" href="css/packages.css">
+    <link rel="stylesheet" href="css/offer.css">
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media.css">
+    
+    <!-- Заголовок -->
+    <title>Travel Agency</title>
+</head>
+
+<body>
+
+<!---------------------------- HEADER ---------------------------->
+
+<header class="header" id="header">
+    <div class="logo" id="logo">
+        Discover
+        <img src="./img/logo.png" alt="" class="logo__img">
+        Greece
+    </div>
+    <nav class="nav">
+        <a href="#" class="nav__link">Home</a>
+        <a href="#destination" class="nav__link">Destinations</a>
+        <a href="#blog" class="nav__link">Blog</a>
+        <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+    <div class="burger">
+        <nav class="burger__nav"></nav>
+    </div>
+    <a href="#" class="btn btn--blue btn--radius">Book now</a>
+</header>
+
+<!---------------------------- TOP ---------------------------->
+
+<div class="top" id="top">
+    <div class="container">
+        <div class="top__content">
+            <div class="top__offer">
+                <h4 class="best-offer">Best Offer</h4>
+                <span>25% off</span>
+                <h1 class="top__title">SANTORINI City Tour</h1>
+                <p class="top__description">Sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate mauris. Morbi accumsan ipsum velit.</p>
+                <a href="#" class="btn btn--clear">see more</a>
+            </div>
+            <div class="top__pointer">
+                <span>Scroll down</span>
+                <img src="./img/top/arrow_down.png" alt="Expand More" class="arrow-down__img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- RESERVATION ---------------------------->
+
+<div class="reservation">
+    <div class="container">
+        <div class="reservation__content">
+            <h3 class="reservation__title">Make a Reservation</h3>
+            <form class="reservation__form" action="#" method="get" id="reservation" autocomplete="on" name="reservation">
+                <input class="form__input form__resort" type="text" name="resort" form="reservation" list="resort-choice" required placeholder="Select Destination">
+                <datalist id="resort-choice">
+                    <option value="Santorini">
+                    <option value="Acropolis of Athens">
+                    <option value="Mykonos Islands">
+                    <option value="Temple of Aphaia">
+                    <option value="Kastoria">
+                    <option value="South Kastoria">
+                </datalist>
+                <input class="form__input form__d-start user-calendar" id="d-start" type="text" name="d-start" form="reservation" pattern="(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d" required placeholder="From">
+                <input class="form__input form__d-end user-calendar" id="d-end" type="text" name="d-end" form="reservation" required placeholder="To">
+                <input class="form__input form__guests" type="text" name="guests" form="reservation" maxlength="5" required placeholder="Guests">
+                <input class="btn btn--blue" type="button" value="Check Availability">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- ABOUT US ---------------------------->
+
+<div class="about">
+    <div class="container">
+        <div class="about__content">
+            <div class="about__content_left">
+                <img src="./img/about/about_img.jpg" alt="About Photo" class="about__img">
+            </div>
+            <div class="about__content_right">
+                <h2 class="about__title">About us</h2>
+                <p class="about__text">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                <br><br>
+                Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+                <a href="#" class="btn btn--blue btn--radius btn--about">READ MORE</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- SEPARATOR ---------------------------->
+
+<div class="separator">
+    <div class="separator__line"></div>
+    <img src="./img/logo.png" alt="Logo" class="separator__logo">
+    <div class="separator__line"></div>
+</div>
+
+<!---------------------------- Top Destinations ---------------------------->
+
+<div class="destination" id="destination">
+    <div class="container">
+        <div class="destination__content">
+            <h2 class="destination__title">Top Destinations</h2>
+            <p class="destination__subtitle">Septos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+            <div class="destination__items">
+                <div class="destination__item">
+                    <div class="destination__item_hover">
+                        <img src="./img/destination/santorini.jpg" alt="Santorini" class="destination__item_img">
+                        <a href="#" class="btn btn--clear btn--hover">see more</a>
+                    </div>
+                    <h4 class="destination__item_title">Santorini</h4>
+                </div>
+                <div class="destination__item">
+                    <div class="destination__item_hover">
+                        <img src="./img/destination/santorini.jpg" alt="Acropolis of Athens" class="destination__item_img">
+                        <a href="#" class="btn btn--clear btn--hover">see more</a>
+                    </div>
+                    <h4 class="destination__item_title">Acropolis of Athens</h4>
+                </div>
+                <div class="destination__item">
+                    <div class="destination__item_hover">
+                        <img src="./img/destination/santorini.jpg" alt="Kastoria" class="destination__item_img">
+                        <a href="#" class="btn btn--clear btn--hover">see more</a>
+                    </div>
+                    <h4 class="destination__item_title">Kastoria</h4>
+                </div>
+                <div class="destination__item">
+                    <div class="destination__item_hover">
+                        <img src="./img/destination/santorini.jpg" alt="Mykonos Islands" class="destination__item_img">
+                        <a href="#" class="btn btn--clear btn--hover">see more</a>
+                    </div>
+                    <h4 class="destination__item_title">Mykonos Islands</h4>
+                </div>
+                <div class="destination__item">
+                    <div class="destination__item_hover">
+                        <img src="./img/destination/santorini.jpg" alt="Temple of Aphaia" class="destination__item_img">
+                        <a href="#" class="btn btn--clear btn--hover">see more</a>
+                    </div>
+                    <h4 class="destination__item_title">Temple of Aphaia</h4>
+                </div>
+                <div class="destination__item">
+                    <div class="destination__item_hover">
+                        <img src="./img/destination/santorini.jpg" alt="South Kastoria" class="destination__item_img">
+                        <a href="#" class="btn btn--clear btn--hover">see more</a>
+                    </div>
+                    <h4 class="destination__item_title">South Kastoria</h4>
+                </div>
+            </div>
+            <a href="#" class="btn btn--blue btn--radius">See all destinations</a>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- PACKAGES ---------------------------->
+
+<div class="packages">
+    <div class="container">
+        <div class="packages__content">
+            <h2 class="packages__title">Packages</h2>
+            <p class="packages__subtitle">Septos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+            <div class="packages__items">
+
+                <div class="packages__item">
+                    <div class="packages__item_header">
+                        <img src="./img/packages/packages_icon_1.png" alt="Culture trip" class="packages__header_img">
+                        <h3 class="packages__header_title">Culture trip</h3>
+                        <p class="packages__header_text">Septos himenaeos. Mauris in erat justo. Nullam ac urna en.</p>
+                    </div>
+                    <div class="packages__item_places">
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 1</h4>
+                            <p class="packages__place_text">Cererat consequat auctor eu in elit sed.</p>
+                            <div class="packages__place_time">120 mins</div>
+                            <div class="packages__place_location">Santorini</div>
+                        </div>
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 2</h4>
+                            <p class="packages__place_text">Class aptent taciti sociosqu ad litora cersa.</p>
+                            <div class="packages__place_time">180 mins</div>
+                            <div class="packages__place_location">Sparta</div>
+                        </div>
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 3</h4>
+                            <p class="packages__place_text">Litora torquent per class aptent taciti.</p>
+                            <div class="packages__place_time">105 mins</div>
+                            <div class="packages__place_location">South Kastoria</div>
+                        </div>
+                    </div>
+                    <div class="packages__item_control">
+                        <a href="#" class="btn btn--blue btn--radius">Book it now</a>
+                        <span>or</span>
+                        <a class="packages__control_link" href="#">Customize it</a>
+                    </div>
+                </div>
+
+                <div class="packages__item">
+                    <div class="packages__item_header">
+                        <img src="./img/packages/packages_icon_1.png" alt="Culture trip" class="packages__header_img">
+                        <h3 class="packages__header_title">Culture trip</h3>
+                        <p class="packages__header_text">Septos himenaeos. Mauris in erat justo. Nullam ac urna en.</p>
+                    </div>
+                    <div class="packages__item_places">
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 1</h4>
+                            <p class="packages__place_text">Cererat consequat auctor eu in elit sed.</p>
+                            <div class="packages__place_time">120 mins</div>
+                            <div class="packages__place_location">Santorini</div>
+                        </div>
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 2</h4>
+                            <p class="packages__place_text">Class aptent taciti sociosqu ad litora cersa.</p>
+                            <div class="packages__place_time">180 mins</div>
+                            <div class="packages__place_location">Sparta</div>
+                        </div>
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 3</h4>
+                            <p class="packages__place_text">Litora torquent per class aptent taciti.</p>
+                            <div class="packages__place_time">105 mins</div>
+                            <div class="packages__place_location">South Kastoria</div>
+                        </div>
+                    </div>
+                    <div class="packages__item_control">
+                        <a href="#" class="btn btn--blue btn--radius">Book it now</a>
+                        <span>or</span>
+                        <a class="packages__control_link" href="#">Customize it</a>
+                    </div>
+                </div>
+
+                <div class="packages__item">
+                    <div class="packages__item_header">
+                        <img src="./img/packages/packages_icon_1.png" alt="Culture trip" class="packages__header_img">
+                        <h3 class="packages__header_title">Culture trip</h3>
+                        <p class="packages__header_text">Septos himenaeos. Mauris in erat justo. Nullam ac urna en.</p>
+                    </div>
+                    <div class="packages__item_places">
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 1</h4>
+                            <p class="packages__place_text">Cererat consequat auctor eu in elit sed.</p>
+                            <div class="packages__place_time">120 mins</div>
+                            <div class="packages__place_location">Santorini</div>
+                        </div>
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 2</h4>
+                            <p class="packages__place_text">Class aptent taciti sociosqu ad litora cersa.</p>
+                            <div class="packages__place_time">180 mins</div>
+                            <div class="packages__place_location">Sparta</div>
+                        </div>
+                        <div class="packages__item_place">
+                            <h4 class="packages__place_title">Place 3</h4>
+                            <p class="packages__place_text">Litora torquent per class aptent taciti.</p>
+                            <div class="packages__place_time">105 mins</div>
+                            <div class="packages__place_location">South Kastoria</div>
+                        </div>
+                    </div>
+                    <div class="packages__item_control">
+                        <a href="#" class="btn btn--blue btn--radius">Book it now</a>
+                        <span>or</span>
+                        <a class="packages__control_link" href="#">Customize it</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- OFFER ---------------------------->
+
+<div class="offer">
+    <div class="offer__content">
+        <h2 class="offer__title">Exclusive tour to Mykonos Island</h2>
+        <p class="offer__text">Lorem Ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+        <p class="offer__note">Some restrictions apply*</p>
+        <a href="#" class="btn btn--blue btn--radius">Book Now</a>
+    </div>
+</div>
+
+<!---------------------------- NEWSLETTER ---------------------------->
+
+<div class="newsletter" id="blog">
+    <div class="newsletter__content">
+        <h2 class="newsletter__title">Not ready yet? Then Join our newsletter</h2>
+        <p class="newsletter__text">Sign up for our newsletter and receive latest news on destinations, reviews, offers and more.</p>
+        <div class="newsletter__input">
+            <input class="newsletter__input_enter" type="email" name="newsletter__input" id="newsletter__input" placeholder="Enter your email address">
+            <a href="#" class="btn btn--blue btn--radius btn--news">Subscribe</a>
+        </div>
+    </div>
+</div>
+
+<!---------------------------- SEPARATOR ---------------------------->
+
+<div class="separator separator--pb">
+    <div class="separator__line"></div>
+    <img src="./img/logo.png" alt="Logo" class="separator__logo">
+    <div class="separator__line"></div>
+</div>
+
+<!---------------------------- FOOTER ---------------------------->
+
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top_item">
+                <h4 class="footer__item_title">Contact</h4>
+                <p class="footer__item_text">Matet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                <div class="footer__item_tel footer__icon">+30 2825601239</div>
+                <div class="footer__item_email footer__icon">info@discovergreece.com</div>
+                <div class="footer__item_location footer__icon">Aenean sollicitudin, lorem quis bibendum auctor</div>
+            </div>
+            <div class="footer__top_item">
+                <h4 class="footer__item_title">Recent Tweets</h4>
+                <div class="footer__item_tweet footer__icon">@henryreyes9 aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.</div>
+                <div class="footer__item_tweet footer__icon">@commit2design aenean sollicitudin, lorem quis bibendum auctor, nisi elit cot.</div>
+                <div class="footer__item_tweet footer__icon">Zenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
+            </div>
+            <div class="footer__top_item">
+                <h4 class="footer__item_title">Recent posts</h4>
+                <div class="footer__item_post footer__icon">How to get ready for your honey moon trip?
+                    Read more...</div>
+                <div class="footer__item_post footer__icon">5 tips to plan the best summer vacation in Greece. Read more...</div>
+                <div class="footer__item_post footer__icon">5 tips to plan the best summer vacation in Greece. Read more...</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__bottom_item">
+            <p class="footer__copyright">Copyright © 2016 Discover Greece. All rights reserved.</p>
+        </div>
+        <div class="footer__bottom_item">
+            <a href="#" class="footer__social"><img src="./img/icons/social/TWITTER_icon.svg" alt="Twitter Link" class="footer__social_img"></a>
+            <a href="#" class="footer__social"><img src="./img/icons/social/FB_icon.svg" alt="Facebook Link" class="footer__social_img"></a>
+            <a href="#" class="footer__social"><img src="./img/icons/social/instagram.svg" alt="Instagram Link" class="footer__social_img"></a>
+        </div>
+        <div class="footer__bottom_item">
+            <nav class="footer__nav">
+                <a href="#" class="fotter__nav_link">Privacy & Terms</a>
+                <a href="#" class="fotter__nav_link">FAQs</a>
+                <a href="#" class="fotter__nav_link">Legal</a>
+                <a href="#" class="fotter__nav_link">Contact</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<!------------------------------ CALENDAR -------------------------->
+
+<div class="calendar" id="calendar" data-call="">
+    <div class="month">
+        <i class="arrow fas fa-angle-double-left" id="prev-year"></i>
+        <i class="arrow fas fa-angle-left" id="prev"></i>
+        <div class="date">
+            <h1></h1>
+            <p></p>
+        </div>
+        <i class="arrow fas fa-angle-right" id="next"></i>
+        <i class="arrow fas fa-angle-double-right" id="next-year"></i>
+    </div>
+    <div class="weekdays">
+        <div>Пн</div>
+        <div>Вт</div>
+        <div>Ср</div>
+        <div>Чт</div>
+        <div>Пт</div>
+        <div>Сб</div>
+        <div>Вс</div>
+    </div>
+    <div class="days"></div>
+</div>
+
+<!---------------------------- JavaScript ---------------------------->
+
+<script src="./js/calendar.js"></script>
+<script src="./js/master.js"></script>
+
+</body>
+
+</html>

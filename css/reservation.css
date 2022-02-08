@@ -1,0 +1,75 @@
+/* RESERVATION
+========================================================================== */
+
+.reservation {
+  width: 100%;
+  min-height: 160px;
+  background-color: #f6f6f6;
+  padding: 28px 0;
+}
+
+.reservation__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservation__title {
+  font-size: 18px;
+  line-height: 0.8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #626161;
+}
+
+.reservation__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.form__input {
+  display: block;
+  min-height: 48px;
+  background-color: #dbdbdb;
+  margin-right: 20px;
+  padding-left: 20px;
+
+  line-height: normal;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.025em;
+  color: #626161;
+}
+
+.form__input:not(:placeholder-shown) {
+  color: #414141;
+}
+
+.form__resort,
+.form__d-start,
+.form__d-end,
+.form__guests {
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  min-width: 144px;
+}
+
+.form__resort {
+  background-image: url(../img/icons/location_icon.png);
+  min-width: 267px;
+}
+
+.form__d-start {
+  background-image: url(../img/icons/date_icon.png);
+}
+
+.form__d-end {
+  background-image: url(../img/icons/date_icon.png);
+}
+
+.form__guests {
+  background-image: url(../img/icons/guests_icon.png);
+}

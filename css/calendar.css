@@ -1,0 +1,154 @@
+/* импортируем шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+:root {
+  /* sizes */
+  --width-calendar: 380px;
+  --height-head: 100px;
+  --height-weekdays: 44.5px;
+  --height-days: 44.5px;
+  /* font */
+  --font-size-arrow: 22px;
+  --font-size-month: 26px;
+  --font-size-year: 14px;
+  --font-size-weekdays: 13px;
+  --font-size-days: 18px;
+  --letter-spacing: 1.3px;
+  /* margin padding */
+  --mb-month: 9px;
+  --m-days: 2.6px;
+  --plr-weekdays: 3.5px;
+  --p-days: 1.8px;
+  /* colors */
+  --color-main: #222227;
+  --color-head: #1289d5;
+  --color-today: #1289d5;
+  --color-text: #eee;
+  --color-bg-hover: #262626;
+  --color-border-hover: #777;
+  --color-arrow-hover: #222;
+  /* other */
+  --border-radius-days: 0%;
+  --border-width-days: 1.8px;
+}
+
+.calendar {
+  font-family: 'Quicksand', sans-serif;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--width-calendar);
+  height: auto;
+  background-color: var(--color-main);
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+.month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--height-head);
+  background-color: var(--color-head);
+  padding: 0;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12%;
+  height: 100%;
+  font-size: var(--font-size-arrow);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  color: var(--color-arrow-hover);
+}
+
+.date {
+  flex-grow: 1;
+}
+
+.date h1 {
+  font-size: var(--font-size-month);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: var(--mb-month);
+}
+
+.date p {
+  font-size: var(--font-size-year);
+}
+
+.weekdays {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--height-weekdays);
+  padding: 0 var(--plr-weekdays);
+}
+
+.weekdays div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-weekdays);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  width: calc(100% / 7);
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* padding: var(--p-days); */
+}
+
+.days div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-days);
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  width: calc((var(--width-calendar) - var(--p-days)*2 - var(--m-days)*14) / 7) ;
+  height: var(--height-days);
+  margin: var(--m-days);
+  border-radius: var(--border-radius-days);
+  transition: background-color 0.3s;
+}
+
+.days div:hover {
+  cursor: pointer;
+}
+
+.days div:hover:not(.today) {
+  background-color: var(--color-bg-hover);
+  border-width: var(--border-width-days);
+  border-color: var(--color-border-hover);
+  border-style: solid;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: var(--color-today);
+}
+
+/* JavaScript */
+
+.js-displayBlock {
+  display: block;
+}

@@ -1,0 +1,50 @@
+/* OFFER
+========================================================================== */
+
+.offer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 550px;
+  background: #7199C3 url(../img/offer/offer_bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.offer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  min-height: 100%;
+  background-color: rgba(237, 237, 237, 0.8);
+  padding: 10px;
+}
+
+.offer__title {
+  font-size: 32px;
+  line-height: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1289d5;
+  margin-bottom: 60px;
+}
+
+.offer__text,
+.offer__note {
+  font-family: Merriweather;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: #777777;
+  width: 60%;
+}
+
+.offer__note {
+  font-size: 13px;
+  color: #939292;
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+

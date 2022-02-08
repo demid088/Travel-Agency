@@ -1,0 +1,92 @@
+/* MASTER
+========================================================================== */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  transition: 1s;
+}
+
+body {
+  max-width: 1470px; /* ширина сайта */
+  width: 100%;
+  margin: 0 auto;
+
+  font-family: 'Lato', sans-serif;
+  /* font-family: 'Merriweather', serif; */
+  font-size: 14px;
+  color: #fff;
+
+  background-color: #777;
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: 0;
+  outline: none;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  line-height: normal;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn--blue {
+  background-color: #1289d5;
+}
+
+.btn--blue:hover {
+  background-color: #0063a0;
+}
+
+.btn--radius {
+  border-radius: 8px;
+}
+
+.btn--clear {
+  max-width: 164px;
+  background-color: rgba(18, 137, 211, 0);
+  border: 2px solid #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  transition: 0.3s;
+}
+
+.btn--clear:hover {
+  background-color: #0063a0;
+}
+
+/* ::псевдокалссы */
+
+/* убираем стандартное оформление */
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}

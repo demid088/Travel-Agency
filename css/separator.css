@@ -1,0 +1,25 @@
+/* SEPARATOR
+========================================================================== */
+
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.separator__line {
+  width: 60px;
+  height: 1px;
+  background-color: #efeded;
+}
+
+.separator__logo {
+  max-width: 80px;
+  margin: 0 10px;
+}
+
+.separator--pb {
+  padding-bottom: 90px;
+}
