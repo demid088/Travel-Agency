@@ -203,10 +203,24 @@ for (const input of inputs) {
 
 // закрываем календарь при клике по пустому месту
 document.addEventListener('mousedown', (ev) => {
+  console.log(ev);
+  // создаем массив элементов
+  const arrElemsTarget = []
+  let currentElem = ev.target
+
+  while (currentElem) {
+    arrElemsTarget.push(currentElem)
+    currentElem = currentElem.parentElement
+  }
+
+  if (arrElemsTarget.indexOf(window) === -1 && arrElemsTarget.indexOf(document) === -1)
+    arrElemsTarget.push(document)
+  if (arrElemsTarget.indexOf(window) === -1)
+    arrElemsTarget.push(window)
   // если клик на календаре
-  for (const elem of ev.path) {
+  for (const elem of arrElemsTarget) {
     if (elem.id === calendarId) {
-      return;
+      return
     }
   }
   // закрываем календарь
