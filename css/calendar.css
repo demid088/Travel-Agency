@@ -4,10 +4,10 @@
 
 :root {
   /* sizes */
-  --width-calendar: 380px;
-  --height-head: 100px;
-  --height-weekdays: 44.5px;
-  --height-days: 44.5px;
+  --width-calendar: 320px;
+  --height-head: 90px;
+  --height-weekdays: 40px;
+  --height-days: 40px;
   /* font */
   --font-size-arrow: 22px;
   --font-size-month: 26px;
